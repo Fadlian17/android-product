@@ -14,4 +14,13 @@
         <item name="android:navigationBarColor">@color/colorPrimaryDark</item>
     </style>
 
+    <style name="Widget.Button.Add" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="Widget.Button.Save" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="backgroundTint">@color/colorAccent</item>
+    </style>
 </resources>

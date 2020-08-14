@@ -3,7 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.alfansyah.multidaya.todoapp.viewmodels.DetailTodoViewModel" />
+    </data>
+
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_Todo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/space_small"
@@ -47,10 +55,11 @@
             android:textColor="@android:color/primary_text_light"
             android:textSize="@dimen/text_default"
             android:textStyle="bold"
+            android:text="@{viewModel.todos.task}"
             tools:text="@tools:sample/full_names" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvPrice"
+            android:id="@+id/tvCreate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvTodo"
@@ -58,6 +67,7 @@
             android:paddingStart="@dimen/space_small"
             android:paddingEnd="@dimen/space_small"
             android:textSize="12sp"
+            android:text="@{viewModel.todos.createdAt}"
             tools:text="Rp. 100.000.000" />
 
         <com.google.android.material.textview.MaterialTextView

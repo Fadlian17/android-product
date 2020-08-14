@@ -2,7 +2,9 @@ package com.alfansyah.multidaya.todoapp.models;
 
 import com.google.gson.annotations.SerializedName;
 
-public class DataItem{
+import java.util.ArrayList;
+
+public class DataItem extends ArrayList<DataItem> {
 
 	@SerializedName("createdAt")
 	private String createdAt;

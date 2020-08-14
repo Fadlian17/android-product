@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.alfansyah.multidaya.todoapp.viewmodels.TodoViewModel" />
+    </data>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,6 +34,16 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="100dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvTodo"
             android:layout_width="match_parent"
@@ -34,7 +51,9 @@
             android:layout_below="@id/till_search"
             android:overScrollMode="never"
             android:padding="@dimen/space_small"
-            app:spanCount="2"
+            app:spanCount="4"
             tools:listitem="@layout/item_todo" />
+
+
     </RelativeLayout>
 </layout>
